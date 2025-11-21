@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Quantum Torque Drive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">HOME</a></li>
+                <li class="nav-item"><a href="why.html" class="nav-link">WHY?</a></li>
+                <li class="nav-item"><a href="workshop-diary.html" class="nav-link">WORKSHOP DIARY</a></li>
+                <li class="nav-item"><a href="working-principle.html" class="nav-link">WORKING PRINCIPLE</a></li>
+                <li class="nav-item"><a href="algorithm.html" class="nav-link">ALGORITHM</a></li>
+                <li class="nav-item"><a href="photos.html" class="nav-link">PHOTOS</a></li>
+                <li class="nav-item"><a href="support.html" class="nav-link">SUPPORT I SEEK</a></li>
+                <li class="nav-item"><a href="donate.html" class="nav-link">DONATE</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link active">CONTACT US</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="orange-strip-section fade-in">
+            <h1 class="section-heading">Get In Touch</h1>
+            <div class="section-content">
+                <p>I'm excited to connect with potential collaborators, investors, researchers, and anyone interested in advancing motor technology. Whether you have technical questions, want to discuss partnerships, or simply want to learn more, I'd love to hear from you.</p>
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin: 40px 0;">
+            <div class="contact-form fade-in">
+                <h2 style="color: #ff6b35; margin-bottom: 30px; text-align: center;">Send a Message</h2>
+                <form id="contact-form" action="contact.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="Technical Collaboration">Technical Collaboration</option>
+                            <option value="Investment Interest">Investment Interest</option>
+                            <option value="Research Partnership">Research Partnership</option>
+                            <option value="Media Inquiry">Media Inquiry</option>
+                            <option value="General Question">General Question</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="Tell me about your interest in the Quantum Torque Drive..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+
+            <div class="fade-in">
+                <div class="orange-strip-section" style="height: auto;">
+                    <h2 style="color: #ff6b35; margin-bottom: 25px;">Contact Information</h2>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="color: #ff6b35; margin-bottom: 10px;">📧 Email</h3>
+                        <p>innovation@quantumtorquedrive.com</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="color: #ff6b35; margin-bottom: 10px;">📍 Location</h3>
+                        <p>Based in Silicon Valley, California<br>Open to global collaborations</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <h3 style="color: #ff6b35; margin-bottom: 10px;">⏰ Response Time</h3>
+                        <p>I typically respond to all serious inquiries within 24-48 hours. Technical collaboration requests receive priority attention.</p>
+                    </div>
+                </div>
+
+                <div class="orange-strip-section" style="height: auto; margin-top: 30px;">
+                    <h2 style="color: #ff6b35; margin-bottom: 25px;">Preferred Contact Methods</h2>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <strong>Technical Collaboration:</strong> Email with specific technical background
+                    </div>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <strong>Research Partnerships:</strong> Detailed proposal outlining mutual benefits
+                    </div>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <strong>Investment Inquiries:</strong> Executive summary of interest and background
+                    </div>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <strong>Media Requests:</strong> Press kit and interview objectives
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="orange-strip-section fade-in">
+            <h1 class="section-heading">Frequently Asked Questions</h1>
+            <div class="section-content">
+                <div style="margin-bottom: 25px;">
+                    <h3 style="color: #ff6b35; margin-bottom: 10px;">Q: Are you looking for co-founders or team members?</h3>
+                    <p>A: Currently, I'm primarily seeking technical collaborators and research partners rather than full-time team members. However, I'm open to discussions with exceptionally qualified individuals who share the vision.</p>
+                </div>
+                
+                <div style="margin-bottom: 25px;">
+                    <h3 style="color: #ff6b35; margin-bottom: 10px;">Q: Is the technology patented?</h3>
+                    <p>A: Patent applications are in process. I'm working with legal experts to ensure comprehensive protection of the core innovations while making the technology accessible for positive global impact.</p>
+                </div>
+                
+                <div style="margin-bottom: 25px;">
+                    <h3 style="color: #ff6b35; margin-bottom: 10px;">Q: Can I visit your workshop?</h3>
+                    <p>A: While I'd love to show the technology in person, workshop visits are currently limited to serious potential collaborators and partners due to the sensitive nature of the ongoing development work.</p>
+                </div>
+                
+                <div style="margin-bottom: 25px;">
+                    <h3 style="color: #ff6b35; margin-bottom: 10px;">Q: Do you have working prototypes?</h3>
+                    <p>A: Yes, multiple working prototypes at various scales have been built and tested. The technology has been validated through extensive testing, though further refinement and scaling are ongoing.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            if (!validateForm('contact-form')) {
+                e.preventDefault();
+            } else {
+                // Form is valid, allow submission to PHP
+                alert('Thank you for your message! I will respond as soon as possible.');
+            }
+        });
+
+        // Add some dynamic behavior to the form
+        document.getElementById('subject').addEventListener('change', function() {
+            if (this.value === 'Technical Collaboration') {
+                document.getElementById('message').placeholder = "Please describe your technical background and specific areas where you believe you can contribute...";
+            } else if (this.value === 'Investment Interest') {
+                document.getElementById('message').placeholder = "Please describe your investment background and what aspects of the technology interest you most...";
+            } else {
+                document.getElementById('message').placeholder = "Tell me about your interest in the Quantum Torque Drive...";
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

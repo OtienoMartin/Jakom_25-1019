@@ -1,0 +1,732 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cambria Math', Cambria, Georgia, serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+}
+
+/* Comprehensive paragraph justification */
+.main-content p,
+.section-content p,
+.orange-strip-section p,
+.why-section p,
+.support-card p,
+.photo-caption p,
+.donation-section p,
+.contact-form p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    line-height: 1.7;
+    margin-bottom: 1.2em;
+    font-size: 1.1em;
+    color: #555;
+    word-spacing: -0.05em;
+}
+
+/* Ensure headings and navigation remain left-aligned */
+.section-heading,
+.why-heading,
+.nav-link,
+.photo-caption h3,
+.support-card h3,
+.donation-option h3 {
+    text-align: left;
+    hyphens: none;
+}
+
+/* Fixed Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    z-index: 1000;
+    padding: 0;
+}
+
+.nav-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 5px;
+	display: flex;
+    justify-content: center;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0;
+    margin: 0;
+	justify-content: center;
+}
+
+.nav-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-item {
+    flex-shrink: 0;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 12px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ff6b35;
+    border-bottom-color: #ff6b35;
+    background: rgba(255, 107, 53, 0.05);
+}
+
+/* Main Content */
+.main-content {
+    margin-top: 60px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Orange Strip Sections */
+.orange-strip-section {
+    background: #fff;
+    border-left: 6px solid #ff6b35;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+	border-radius: 12px;
+}
+
+.orange-strip-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 107, 53, 0.02), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.orange-strip-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.orange-strip-section:hover::before {
+    opacity: 1;
+}
+
+.section-heading {
+    color: #ff6b35;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.section-content {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Why Page Sections */
+.why-section {
+    background: #fff;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-left: 4px solid #ff6b35;
+}
+
+.why-heading {
+    color: #ff6b35;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Photo Gallery */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.photo-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.photo-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.photo-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.1);
+}
+
+.photo-caption {
+    padding: 20px;
+    background: #fff;
+}
+
+.photo-caption h3 {
+    color: #ff6b35;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+/* Support Cards */
+.support-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.support-card {
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-left: 5px solid #ff6b35;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.support-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.support-card h3 {
+    color: #ff6b35;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+/* Donation Section */
+.donation-section {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 40px 0;
+}
+
+.donation-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.donation-option {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid #ff6b35;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.donation-option:hover {
+    background: #ff6b35;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ff6b35;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    font-family: 'Cambria Math', Cambria, Georgia, serif;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ff6b35;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Cambria Math', Cambria, Georgia, serif;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        padding: 0 10px;
+    }
+    
+    .nav-link {
+        padding: 15px 20px;
+        font-size: 14px;
+    }
+    
+    .main-content {
+        margin-top: 60px;
+        padding: 20px 15px;
+    }
+    
+    .orange-strip-section {
+        padding: 25px;
+    }
+    
+    .section-heading {
+        font-size: 1.8em;
+    }
+}
+
+/* Add these to your existing style.css file */
+
+select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    font-family: 'Cambria Math', Cambria, Georgia, serif;
+    background: white;
+}
+
+select:focus {
+    outline: none;
+    border-color: #ff6b35;
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* Success message styles */
+.success-message {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 1px solid #c3e6cb;
+}
+
+.error-message {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 1px solid #f5c6cb;
+}
+
+/* Zero gaps - COMPREHENSIVE VERSION FOR ALL PAGES */
+
+/* Remove margins from ALL headings in main content */
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6 {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Remove margins from ALL paragraphs in main content */
+.main-content p {
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.7;
+}
+
+/* KEEP margins for main div sections - only remove from nested divs */
+.main-content > div {
+    margin-bottom: 30px !important; /* Keep the gap between sections */
+    padding: 40px !important; /* Keep the padding inside sections */
+}
+
+/* Remove margins only from nested content divs */
+.main-content .section-content,
+.main-content .why-section > div,
+.main-content .orange-strip-section > div,
+.main-content .support-card > div,
+.main-content .photo-caption > div,
+.main-content .donation-section > div,
+.main-content .contact-form > div {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Ensure immediate flow after headings */
+.main-content h1 + *,
+.main-content h2 + *,
+.main-content h3 + *,
+.main-content h4 + *,
+.main-content h5 + *,
+.main-content h6 + * {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Workshop Diary Table Styles */
+.workshop-table-container {
+    overflow-x: auto;
+    margin: 30px 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.workshop-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    font-family: 'Cambria Math', Cambria, Georgia, serif;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.workshop-table th {
+    background: linear-gradient(135deg, #ff6b35 0%, #e55a2b 100%);
+    color: white;
+    font-weight: 700;
+    font-size: 1.1em;
+    padding: 20px 15px;
+    text-align: left;
+    border: none;
+    position: sticky;
+    top: 0;
+}
+
+.workshop-table td {
+    padding: 20px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: top;
+}
+
+.workshop-table tbody tr {
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.workshop-table tbody tr:hover {
+    background: rgba(255, 107, 53, 0.05);
+    transform: translateX(5px);
+}
+
+.workshop-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Column specific styles */
+.date-column {
+    width: 120px;
+    font-weight: 600;
+}
+
+.activities-column {
+    width: 45%;
+}
+
+.financial-column {
+    width: 35%;
+}
+
+.date-cell {
+    font-weight: 600;
+    color: #ff6b35;
+    background: rgba(255, 107, 53, 0.05);
+    border-right: 3px solid #ff6b35;
+}
+
+.activities-cell ul,
+.financial-cell ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.activities-cell li,
+.financial-cell li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.activities-cell li:last-child,
+.financial-cell li:last-child {
+    margin-bottom: 0;
+}
+
+/* Financial transaction colors */
+.income {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.income::before {
+    content: "↑ ";
+    font-weight: bold;
+}
+
+.expense {
+    color: #dc3545;
+    font-weight: 600;
+}
+
+.expense::before {
+    content: "↓ ";
+    font-weight: bold;
+}
+
+.neutral {
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Summary Cards */
+.workshop-summary {
+    background: rgba(255, 107, 53, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    border-left: 4px solid #ff6b35;
+}
+
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.summary-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-top: 4px solid #ff6b35;
+    transition: transform 0.3s ease;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+}
+
+.summary-card h4 {
+    color: #ff6b35;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.summary-card p {
+    color: #666;
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .workshop-table {
+        font-size: 14px;
+    }
+    
+    .workshop-table th,
+    .workshop-table td {
+        padding: 15px 10px;
+    }
+    
+    .date-column {
+        width: 100px;
+    }
+    
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .activities-cell ul,
+    .financial-cell ul {
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .workshop-table-container {
+        margin: 20px -10px;
+        border-radius: 0;
+    }
+    
+    .workshop-table {
+        font-size: 13px;
+    }
+    
+    .workshop-table th,
+    .workshop-table td {
+        padding: 12px 8px;
+    }
+    
+    .workshop-summary {
+        padding: 20px;
+    }
+}
+
+/* Three Column Grid Layout */
+.three-column-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.column {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-left: 4px solid #ff6b35;
+    transition: transform 0.3s ease;
+}
+
+.column:hover {
+    transform: translateY(-5px);
+}
+
+.column h3 {
+    color: #ff6b35;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.column p {
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .three-column-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
