@@ -24,12 +24,12 @@
     overflow-x: auto;
     white-space: nowrap;
     scrollbar-width: none;
+    scroll-padding-left: 10px;
     -ms-overflow-style: none;
     padding: 0;
     margin: 0;
-	  justify-content: center;
     flex-wrap: nowrap;  /* prevent wrapping */
-  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
 }
 
 .nav-menu::-webkit-scrollbar {
