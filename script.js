@@ -252,3 +252,17 @@ function exportWorkshopDiary() {
     a.click();
     document.body.removeChild(a);
 }
+
+window.addEventListener('load', () => {
+    const navMenu = document.querySelector('.nav-menu');
+    if (navMenu) {
+      navMenu.scrollLeft = 0;
+    }
+  });
+
+  window.addEventListener('load', () => {
+  const navMenu = document.querySelector('.nav-menu');
+  if (navMenu) {
+    navMenu.scrollTo({ left: 0, behavior: 'smooth' });
+  }
+});
