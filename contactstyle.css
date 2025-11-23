@@ -23,14 +23,13 @@
     list-style: none;
     overflow-x: auto;
     white-space: nowrap;
-    scroll-padding-left: 10px;
     scrollbar-width: none;
     -ms-overflow-style: none;
     padding: 0;
     margin: 0;
-    flex-wrap: nowrap;  /* prevent wrapping */
-   -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    justify-content: flex-start; /* changed from center */
 }
+
 
 .nav-menu::-webkit-scrollbar {
     display: none;
