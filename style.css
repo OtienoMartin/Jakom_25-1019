@@ -11,6 +11,7 @@ body {
     color: #333;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     min-height: 100vh;
+    padding-top: 50px;
 }
 
 /* Comprehensive paragraph justification */
@@ -67,6 +68,7 @@ body {
 
 .nav-menu {
     display: flex;
+    position: relative;
     list-style: none;
     overflow-x: auto;
     white-space: nowrap;
@@ -75,6 +77,19 @@ body {
     padding: 0;
     margin: 0;
 	justify-content: center;
+    flex-wrap: nowrap;  /* prevent wrapping */
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+}
+
+.nav-menu::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
 }
 
 .nav-menu::-webkit-scrollbar {
@@ -345,7 +360,12 @@ body {
     }
 }
 
-/* Add these to your existing style.css file */
+@media (max-width: 400px) {
+  .nav-container {
+    padding: 0 2px;
+  }
+}
+
 
 select {
     width: 100%;
